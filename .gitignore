@@ -1,43 +1,63 @@
-# Windows image file caches
-Thumbs.db
-ehthumbs.db
+**/*.class
+MODEL_FILE*.txt
 
-# Folder config file
-Desktop.ini
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
 
-# Recycle Bin used on file shares
-$RECYCLE.BIN/
+# Package Files #
+*.jar
+*.war
+*.ear
 
-# Windows Installer files
-*.cab
-*.msi
-*.msm
-*.msp
+# Eclipse
+.project
+.classpath
+.settings/
+.factorypath
 
-# Windows shortcuts
-*.lnk
+# ItelliJ
+.idea/
+*.iml
+*.iws
 
-# =========================
-# Operating System Files
-# =========================
-
-# OSX
-# =========================
-
+# Mac
 .DS_Store
-.AppleDouble
-.LSOverride
 
-# Thumbnails
-._*
+# Maven
+log/
+target/
 
-# Files that might appear on external disk
-.Spotlight-V100
-.Trashes
+# Netbeans
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+nbactions.xml
+nb-configuration.xml
+.nb-gradle/
+build.xml
+manifest.mf
+build-impl.xml
+genfiles.properties
+project.properties
+project.xml
 
-# Directories potentially created on remote AFP share
-.AppleDB
-.AppleDesktop
-Network Trash Folder
-Temporary Items
-.apdisk
+# Android Studio
+.gradle
+gradle
+/*/local.properties
+/*/out
+/*/*/build
+build
+/*/*/production
+*.iml
+*.iws
+*.ipr
+*~
+*.swp
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+/bin/
+/OG3/nbproject/private/
