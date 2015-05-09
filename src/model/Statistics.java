@@ -5,37 +5,47 @@ package model;
  */
 public class Statistics {
 
-    //Primary stats
+    //--Primary stats---------------------------------
     private int health;
     private int mana;
     private int experience;
+    private int strength;
     private int endurance;
     private int agility;
 
-    //Constructors
-    public Statistics() {
-        setDefaultStats();
+    //--Constructors----------------------------------
+
+    //Copy constructor
+    public Statistics(Statistics stats) {
+        this.health = stats.health;
+        this.mana = stats.mana;
+        this.experience = stats.experience;
+        this.strength = stats.strength;
+        this.endurance = stats.endurance;
+        this.agility = stats.agility;
     }
 
-    public Statistics(int health, int mana, int experience, int endurance, int agility) {
-
+    //Custom constructor - Used for loading the game
+    public Statistics(int health, int mana, int experience, int strength, int endurance, int agility) {
+        this.health = health;
+        this.mana = mana;
+        this.experience = experience;
+        this.strength = strength;
+        this.endurance = endurance;
+        this.agility = agility;
     }
 
-    public void setDefaultStats() {
-        this.health = 100;
-        this.mana = 100;
-        this.experience = 0;
-        this.endurance = 10;
-        this.agility = 10;
-    }
-
-    //Getters and Setters
+    //--Getters and Setters---------------------------
     public int getHealth() {
         return health;
     }
 
     public void setHealth(int health) {
         this.health = health;
+    }
+
+    public void changeHealth(int amt) {
+        this.health += amt;
     }
 
     public int getMana() {
@@ -54,12 +64,31 @@ public class Statistics {
         this.experience = experience;
     }
 
+    //TODO - Figure out good, balanced calculations for these and find more dependent stats to use
+    //--Dependent Stats-------------------------------
+    //Dependent on current health, endurance and agility
     public int getStamina() {
-        return agility * endurance * health / 1000;
+        return 0;
     }
 
+    //Dependent on current health and agility
     public int getMovement() {
-        return agility * health / 100;
+        return 0;
+    }
+
+    //Dependent on experience
+    public int getLevel() {
+        return 0;
+    }
+
+    //Dependent on strength, health and equipment
+    public int getPower() {
+        return 0;
+    }
+
+    //Dependent on endurance, agility, health and equipment
+    public int getDefence() {
+        return 0;
     }
 
 }

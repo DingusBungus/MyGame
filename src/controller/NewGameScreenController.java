@@ -13,16 +13,19 @@ public class NewGameScreenController extends Controller {
 
     public NewGameScreenController() {
         super(null);
-        Viewport viewport = new NewGameScreenViewport(new Class1ButtonListener());
+        Viewport viewport = new NewGameScreenViewport(new Occupation1ButtonListener(),
+                                                      new Occupation2ButtonListener(),
+                                                      new Occupation3ButtonListener(),
+                                                      new Occupation4ButtonListener());
         this.viewport = viewport;
     }
 
     //Temporary names until class names are set
-    private class Class1ButtonListener implements MouseListener {
+    private class Occupation1ButtonListener implements MouseListener {
 
         @Override
         public void mouseClicked(MouseEvent e) {
-            System.out.println("Mouse clicked");
+            System.out.println("Mouse clicked 1");
         }
 
         //Not needed
@@ -36,11 +39,47 @@ public class NewGameScreenController extends Controller {
         public void mouseExited(MouseEvent e) { }
     }
 
-    private class Class2ButtonListener implements MouseListener {
+    private class Occupation2ButtonListener implements MouseListener {
 
         @Override
         public void mouseClicked(MouseEvent e) {
-            System.out.println("Mouse clicked");
+            System.out.println("Mouse clicked 2");
+        }
+
+        //Not needed
+        @Override
+        public void mousePressed(MouseEvent e) { }
+        @Override
+        public void mouseReleased(MouseEvent e) { }
+        @Override
+        public void mouseEntered(MouseEvent e) { }
+        @Override
+        public void mouseExited(MouseEvent e) { }
+    }
+
+    private class Occupation3ButtonListener implements MouseListener {
+
+        @Override
+        public void mouseClicked(MouseEvent e) {
+            System.out.println("Mouse clicked 3");
+        }
+
+        //Not needed
+        @Override
+        public void mousePressed(MouseEvent e) { }
+        @Override
+        public void mouseReleased(MouseEvent e) { }
+        @Override
+        public void mouseEntered(MouseEvent e) { }
+        @Override
+        public void mouseExited(MouseEvent e) { }
+    }
+
+    private class Occupation4ButtonListener implements MouseListener {
+
+        @Override
+        public void mouseClicked(MouseEvent e) {
+            System.out.println("Mouse clicked 4");
         }
 
         //Not needed

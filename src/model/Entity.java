@@ -7,6 +7,11 @@ public abstract class Entity {
     private Statistics statistics;
     private Position position;
 
+    public Entity(Statistics statistics, Position position) {
+        this.statistics = statistics;
+        this.position = position;
+    }
+
     public Statistics getStatistics() { return statistics; }
     public Position getPosition() { return position; }
 
@@ -19,7 +24,7 @@ public abstract class Entity {
     }
 
     public void changeHealth(int amt) {
-
+        statistics.changeHealth(amt);
     }
 
 }

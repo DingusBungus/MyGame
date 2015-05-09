@@ -14,12 +14,21 @@ import java.awt.event.MouseListener;
 public class NewGameScreenViewport extends Viewport {
 
     MouseListener listener1;
+    MouseListener listener2;
+    MouseListener listener3;
+    MouseListener listener4;
 
     /**
      * Creates new form NewGameScreenViewport
      */
-    public NewGameScreenViewport(MouseListener listener1) {
+    public NewGameScreenViewport(MouseListener listener1,
+                                 MouseListener listener2,
+                                 MouseListener listener3,
+                                 MouseListener listener4) {
         this.listener1 = listener1;
+        this.listener2 = listener2;
+        this.listener3 = listener3;
+        this.listener4 = listener4;
         initComponents();
         setListeners();
     }
@@ -27,6 +36,9 @@ public class NewGameScreenViewport extends Viewport {
     @Override
     public void setListeners() {
         jLabel1.addMouseListener(listener1);
+        jLabel2.addMouseListener(listener2);
+        jLabel3.addMouseListener(listener3);
+        jLabel4.addMouseListener(listener4);
     }
 
     /**
