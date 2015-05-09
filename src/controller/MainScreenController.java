@@ -2,9 +2,8 @@ package controller;
 
 import view.MainScreenViewport;
 import view.Viewport;
-
+import javax.swing.*;
 import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 /**
  * Created by Doherty on 5/5/2015.
@@ -13,22 +12,23 @@ public class MainScreenController extends Controller {
 
     public MainScreenController() {
         super(null);
-        Viewport viewport = new MainScreenViewport(new StartButtonListener(),
+        Viewport viewport = new MainScreenViewport(new NewGameButtonListener(),
                                                    new OptionsButtonListener(),
                                                    new LoadButtonListener(),
                                                    new ExitButtonListener());
         this.viewport = viewport;
     }
 
-    private class StartButtonListener implements ActionListener {
+    private class NewGameButtonListener extends AbstractAction {
+
         @Override
         public void actionPerformed(ActionEvent e) {
-            //initialize(new NewGameScreenController());
-            System.out.println("Start Button Pressed");
+            initialize(new NewGameScreenController());
+            //System.out.println("Start Button Pressed");
         }
     }
 
-    private class OptionsButtonListener implements ActionListener {
+    private class OptionsButtonListener extends AbstractAction {
         @Override
         public void actionPerformed(ActionEvent e) {
             //initialize(new OptionsScreenController());
@@ -36,7 +36,7 @@ public class MainScreenController extends Controller {
         }
     }
 
-    private class LoadButtonListener implements ActionListener {
+    private class LoadButtonListener extends AbstractAction {
         @Override
         public void actionPerformed(ActionEvent e) {
             //initialize(new LoadScreenController());
@@ -44,13 +44,11 @@ public class MainScreenController extends Controller {
         }
     }
 
-    private class ExitButtonListener implements ActionListener {
+    private class ExitButtonListener extends AbstractAction {
         @Override
         public void actionPerformed(ActionEvent e) {
             System.exit(0);
         }
     }
-
-
 
 }
