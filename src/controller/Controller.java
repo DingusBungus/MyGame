@@ -9,6 +9,7 @@ public abstract class Controller {
 
     protected Viewport viewport;
 
+    public Controller() { this.viewport = null; }
     public Controller(Viewport viewport) {
         this.viewport = viewport;
     }

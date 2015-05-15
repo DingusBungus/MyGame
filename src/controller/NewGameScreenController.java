@@ -2,7 +2,6 @@ package controller;
 
 import view.NewGameScreenViewport;
 import view.Viewport;
-
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
@@ -12,12 +11,16 @@ import java.awt.event.MouseListener;
 public class NewGameScreenController extends Controller {
 
     public NewGameScreenController() {
-        super(null);
+        super();
         Viewport viewport = new NewGameScreenViewport(new Occupation1ButtonListener(),
                                                       new Occupation2ButtonListener(),
                                                       new Occupation3ButtonListener(),
                                                       new Occupation4ButtonListener());
         this.viewport = viewport;
+    }
+
+    public NewGameScreenController(Viewport viewport) {
+        super(viewport);
     }
 
     //Temporary names until class names are set

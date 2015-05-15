@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package view;
 
 import java.awt.event.MouseListener;
@@ -24,7 +19,9 @@ public class NewGameScreenViewport extends Viewport {
     public NewGameScreenViewport(MouseListener listener1,
                                  MouseListener listener2,
                                  MouseListener listener3,
-                                 MouseListener listener4) {
+                                 MouseListener listener4)
+    {
+        super();
         this.listener1 = listener1;
         this.listener2 = listener2;
         this.listener3 = listener3;
@@ -34,7 +31,7 @@ public class NewGameScreenViewport extends Viewport {
     }
     
     @Override
-    public void setListeners() {
+    protected void setListeners() {
         jLabel1.addMouseListener(listener1);
         jLabel2.addMouseListener(listener2);
         jLabel3.addMouseListener(listener3);

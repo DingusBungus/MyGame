@@ -11,12 +11,15 @@ import java.awt.event.ActionEvent;
 public class MainScreenController extends Controller {
 
     public MainScreenController() {
-        super(null);
+        super();
         Viewport viewport = new MainScreenViewport(new NewGameButtonListener(),
-                                                   new OptionsButtonListener(),
                                                    new LoadButtonListener(),
                                                    new ExitButtonListener());
         this.viewport = viewport;
+    }
+
+    public MainScreenController(Viewport viewport) {
+        super(viewport);
     }
 
     private class NewGameButtonListener extends AbstractAction {
@@ -24,15 +27,6 @@ public class MainScreenController extends Controller {
         @Override
         public void actionPerformed(ActionEvent e) {
             initialize(new NewGameScreenController());
-            //System.out.println("Start Button Pressed");
-        }
-    }
-
-    private class OptionsButtonListener extends AbstractAction {
-        @Override
-        public void actionPerformed(ActionEvent e) {
-            //initialize(new OptionsScreenController());
-            System.out.println("Options Button Pressed");
         }
     }
 

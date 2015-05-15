@@ -9,17 +9,15 @@ import java.awt.event.KeyEvent;
 public class MainScreenViewport extends Viewport {
 
     AbstractAction newGameButtonListener;
-    AbstractAction optionsButtonListener;
     AbstractAction loadButtonListener;
     AbstractAction exitButtonListener;
 
     public MainScreenViewport( AbstractAction newGameButtonListener,
-                               AbstractAction optionsButtonListener,
                                AbstractAction loadButtonListener,
                                AbstractAction exitButtonListener )
     {
+        super();
         this.newGameButtonListener = newGameButtonListener;
-        this.optionsButtonListener = optionsButtonListener;
         this.loadButtonListener = loadButtonListener;
         this.exitButtonListener = exitButtonListener;
         initComponents();
@@ -32,10 +30,6 @@ public class MainScreenViewport extends Viewport {
         newGameButton.addActionListener(newGameButtonListener);
         newGameButton.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(KeyStroke.getKeyStroke(KeyEvent.VK_N, 0), "N_pressed");
         newGameButton.getActionMap().put("N_pressed", newGameButtonListener);
-
-        optionsButton.addActionListener(optionsButtonListener);
-        optionsButton.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(KeyStroke.getKeyStroke(KeyEvent.VK_O,0), "O_pressed");
-        optionsButton.getActionMap().put("O_pressed", optionsButtonListener);
 
         loadGameButton.addActionListener(loadButtonListener);
         loadGameButton.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(KeyStroke.getKeyStroke(KeyEvent.VK_L,0), "L_pressed");
@@ -56,7 +50,6 @@ public class MainScreenViewport extends Viewport {
     private void initComponents() {
 
         newGameButton = new javax.swing.JButton();
-        optionsButton = new javax.swing.JButton();
         loadGameButton = new javax.swing.JButton();
         exitButton = new javax.swing.JButton();
 
@@ -65,10 +58,6 @@ public class MainScreenViewport extends Viewport {
         newGameButton.setFont(new java.awt.Font("Malgun Gothic", 1, 18)); // NOI18N
         newGameButton.setText("New Game");
         newGameButton.setBorder(javax.swing.BorderFactory.createMatteBorder(4, 4, 0, 1, new java.awt.Color(0, 0, 0)));
-
-        optionsButton.setFont(new java.awt.Font("Malgun Gothic", 1, 18)); // NOI18N
-        optionsButton.setText("Options");
-        optionsButton.setBorder(javax.swing.BorderFactory.createMatteBorder(4, 4, 0, 1, new java.awt.Color(0, 0, 0)));
 
         loadGameButton.setFont(new java.awt.Font("Malgun Gothic", 1, 18)); // NOI18N
         loadGameButton.setText("Load Game");
@@ -87,22 +76,19 @@ public class MainScreenViewport extends Viewport {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(exitButton, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(loadGameButton, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(optionsButton, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(newGameButton, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(100, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(100, Short.MAX_VALUE)
+                .addContainerGap(96, Short.MAX_VALUE)
                 .addComponent(newGameButton, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(10, 10, 10)
-                .addComponent(optionsButton, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(10, 10, 10)
                 .addComponent(loadGameButton, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(10, 10, 10)
                 .addComponent(exitButton, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(100, Short.MAX_VALUE))
+                .addContainerGap(164, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -111,6 +97,5 @@ public class MainScreenViewport extends Viewport {
     private javax.swing.JButton exitButton;
     private javax.swing.JButton loadGameButton;
     private javax.swing.JButton newGameButton;
-    private javax.swing.JButton optionsButton;
     // End of variables declaration//GEN-END:variables
 }

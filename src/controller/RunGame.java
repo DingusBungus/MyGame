@@ -34,6 +34,4 @@ public class RunGame {
         frame.setExtendedState(frame.getExtendedState() | JFrame.MAXIMIZED_BOTH);
         frame.setVisible(true);
     }
-
-
 }

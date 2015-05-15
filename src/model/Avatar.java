@@ -16,4 +16,8 @@ public class Avatar extends Entity {
         super(occupation.getDefaultStats(), startingPosition);
         this.occupation = occupation;
     }
+
+    public Occupation getOccupation() {
+        return occupation;
+    }
 }

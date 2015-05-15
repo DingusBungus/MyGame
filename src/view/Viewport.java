@@ -8,5 +8,5 @@ import javax.swing.*;
 
 //Possibly add more later
 public abstract class Viewport extends JPanel {
-    public abstract void setListeners();
+    protected abstract void setListeners();
 }
