@@ -1,5 +1,7 @@
 package controller;
 
+import model.map.Map;
+
 import javax.swing.*;
 
 /**
@@ -9,6 +11,8 @@ public class RunGame {
 
     private static Controller currentController;
     private static JFrame frame;
+    private Map map;
+    private static final String beginningMapFile = "/src/resources/map1.txt";
 
     /* The game itself */
     public static void main(String[] args) {
@@ -18,6 +22,7 @@ public class RunGame {
 
     public RunGame(Controller controller) {
         frame = new JFrame();
+        map = Map.parseMapFromFile(beginningMapFile);
         initialize(controller);
     }
 
@@ -34,4 +39,5 @@ public class RunGame {
         frame.setExtendedState(frame.getExtendedState() | JFrame.MAXIMIZED_BOTH);
         frame.setVisible(true);
     }
+
 }

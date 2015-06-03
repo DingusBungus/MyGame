@@ -6,4 +6,9 @@ package utilities;
  */
 public class ImagePaths {
     public static final String IMG_DIR = "src/resources/";
+
+    //Terrain Sprites
+    public static final String SPRITE_SHEET = IMG_DIR + "sprite_sheet.png";
+
+    //Entity Sprites
 }

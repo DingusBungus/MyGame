@@ -23,7 +23,6 @@ public class MainScreenController extends Controller {
     }
 
     private class NewGameButtonListener extends AbstractAction {
-
         @Override
         public void actionPerformed(ActionEvent e) {
             initialize(new NewGameScreenController());

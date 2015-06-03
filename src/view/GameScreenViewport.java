@@ -5,7 +5,8 @@
  */
 package view;
 
-import javax.swing.*;
+import java.awt.event.KeyListener;
+import java.awt.event.MouseListener;
 import java.util.ArrayList;
 
 /**
@@ -14,14 +15,16 @@ import java.util.ArrayList;
  */
 public class GameScreenViewport extends Viewport {
 
-    private ArrayList<AbstractAction> listeners;
+    private ArrayList<MouseListener> mouseListeners;
+    private ArrayList<KeyListener> keyListeners;
 
     /**
      * Creates new form GameScreenViewport
      */
-    public GameScreenViewport(ArrayList<AbstractAction> listeners) {
+    public GameScreenViewport(ArrayList<MouseListener> mouseListeners, ArrayList<KeyListener> keyListeners) {
         super();
-        this.listeners = listeners;
+        this.mouseListeners = mouseListeners;
+        this.keyListeners = keyListeners;
         initComponents();
         setListeners();
     }

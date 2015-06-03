@@ -26,5 +26,4 @@ public abstract class Entity {
     public void changeHealth(int amt) {
         statistics.changeHealth(amt);
     }
-
 }
