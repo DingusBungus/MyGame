@@ -1,6 +1,7 @@
-package model;
+package model.utils;
 
 /**
+ * Only need 2-D for top-down
  * Created by Doherty on 5/8/2015.
  */
 public class Position {

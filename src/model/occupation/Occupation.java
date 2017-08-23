@@ -1,6 +1,6 @@
 package model.occupation;
 
-import model.Statistics;
+import model.entity.Statistics;
 
 /**
  * Created by Doherty on 5/8/2015.

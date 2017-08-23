@@ -1,6 +1,7 @@
-package model;
+package model.entity;
 
 import model.occupation.Occupation;
+import model.utils.Position;
 
 /**
  * Created by Doherty on 5/8/2015.

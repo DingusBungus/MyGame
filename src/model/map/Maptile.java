@@ -1,6 +1,6 @@
 package model.map;
 
-import model.Position;
+import model.utils.Position;
 
 import java.awt.image.BufferedImage;
 

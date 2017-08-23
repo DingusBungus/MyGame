@@ -1,6 +1,6 @@
 package model.map;
 
-import model.Position;
+import model.utils.Position;
 import utilities.SubImages;
 
 import java.awt.image.BufferedImage;
@@ -22,6 +22,7 @@ public class Map {
 
     public Map(ArrayList<ArrayList<Maptile>> map) {
         this.map = map;
+        charToImageMap = new HashMap<>(32);
         populateHashMap();
     }
 

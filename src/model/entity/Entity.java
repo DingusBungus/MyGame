@@ -1,4 +1,7 @@
-package model;
+package model.entity;
+
+import model.utils.Direction;
+import model.utils.Position;
 
 /**
  * Created by Doherty on 5/8/2015.
@@ -23,7 +26,7 @@ public abstract class Entity {
         position.setY(position.getY() + direction.getY());
     }
 
-    public void changeHealth(int amt) {
+    public void changeHealth(double amt) {
         statistics.changeHealth(amt);
     }
 }

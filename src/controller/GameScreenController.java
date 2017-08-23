@@ -1,6 +1,6 @@
 package controller;
 
-import model.Avatar;
+import model.entity.Avatar;
 import model.map.Map;
 import view.GameScreenViewport;
 import view.Viewport;

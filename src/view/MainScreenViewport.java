@@ -53,7 +53,7 @@ public class MainScreenViewport extends Viewport {
         loadGameButton = new javax.swing.JButton();
         exitButton = new javax.swing.JButton();
 
-        setBackground(new java.awt.Color(0, 0, 0));
+        setBackground(new java.awt.Color(255, 255, 255));
 
         newGameButton.setFont(new java.awt.Font("Malgun Gothic", 1, 18)); // NOI18N
         newGameButton.setText("New Game");
